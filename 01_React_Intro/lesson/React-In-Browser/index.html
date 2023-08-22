@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="root"></div>
+
+    <script type="text/babel">
+//react
+//react-dom
+//real dom
+
+// create React Element
+/* const heading = React.createElement("h1",null, "Hello World!") */ //react element
+
+/* const paragraph = React.createElement("p",null, "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate repellendus expedita nostrum non porro! Officiis voluptates et nobis in fuga veniam recusandae consequatur libero repellendus quod aut hic, est, corrupti error cupiditate! Voluptas obcaecati soluta in deserunt libero voluptatum accusantium nesciunt laboriosam aut quisquam unde neque eius ipsam magnam excepturi deleniti officiis, ratione explicabo suscipit. Ipsam vel, optio modi ad alias maxime voluptates provident in atque, dolorem reprehenderit illo officiis placeat corrupti eum ex labore ipsum quam ipsa est aut quidem ducimus saepe? Sequi, aliquid. Inventore, rerum? Ducimus numquam, cupiditate non vero dolor ad quae beatae, autem voluptatum doloremque cumque.") */
+
+/* const nav = <ul>
+    <li>home</li>
+    <li>about</li>
+    <li>profile</li>
+    </ul> */
+
+    function Navigation(){
+        return (<ul>
+    <li>home</li>
+    <li>about</li>
+    <li>profile</li>
+    </ul>)
+    }
+
+/* const heading = <h1>Hi, Naqvi</h1> */
+
+/* const nav = React.createElement("ul",null, React.createElement("li",null,"Home"),React.createElement("li",null,"about") )  */
+
+
+// functional component
+function Header(){
+    return <h1>Hi, Naqvi</h1>
+}
+
+function Paragraph(){
+    return ( <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur corrupti aliquam distinctio? Enim, laboriosam placeat ex perferendis deleniti in ipsum eveniet non! Perferendis modi quae minima dignissimos repudiandae quaerat sequi hic unde assumenda maxime mollitia quasi, eveniet nam nisi facilis reprehenderit molestiae numquam asperiores ratione ab! Quisquam nobis corrupti tenetur amet quia magnam totam cumque neque dicta perspiciatis nesciunt laudantium alias velit omnis adipisci ab officiis harum voluptatum id doloremque, maiores, minus autem illum? Repudiandae iusto modi doloribus earum sit nulla nesciunt. Natus obcaecati mollitia nisi, dignissimos voluptate quis earum commodi cumque consequuntur, vitae atque! Earum corporis ad consectetur sed.</p>)
+}
+
+// Main Component
+function Main(){
+    return (
+        <div> 
+            <Navigation/>
+            <Header/>
+            <Header/>
+            <Header/>
+           <Paragraph/>
+           <Paragraph/>
+           <Paragraph/>
+           <Paragraph/>
+           <Paragraph/>
+           <Paragraph/>
+            
+        </div>)
+}
+
+//virtual dom
+/* React.createRoot("target place / target div where reactDOM will create your elements").render("elements/component") */
+/* ReactDOM.createRoot(document.getElementById("root")).render(Header()) */
+/* ReactDOM.createRoot(document.getElementById("root")).render(<Main></Main>) */
+ReactDOM.createRoot(document.getElementById("root")).render(<Main/>)
+
+
+
+
+
+
+
+/* function print(){
+   console.log("react")
+console.log("is")
+console.log("awesome") 
+}
+print()
+
+print() */
+
+
+    </script>
+
+
+</body>
+</html>
