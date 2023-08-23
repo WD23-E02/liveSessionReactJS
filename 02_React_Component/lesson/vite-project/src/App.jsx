@@ -35,14 +35,16 @@ function App() {
           </ul>
         </div>
       ))}
+      {/* To iterate over an array using "map," we wrap the content with curly braces "{}." */}
 
+      {/* if we want to reference a javascript value, we need to wrap it with curly braces*/}
       {products.map((obj) => (
         <div key={obj.id}>{obj.name}</div>
       ))}
 
       <footer>This is the footer</footer>
 
-      {/* conditional rendering a text or whatever , we can use ternary operators */}
+      {/* Conditional rendering is commonly achieved using the ternary operator. */}
 
       {isLoggedIn ? <h2>Hello Leon</h2> : <h2>Hello there</h2>}
 
