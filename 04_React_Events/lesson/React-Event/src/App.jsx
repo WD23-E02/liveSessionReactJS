@@ -10,6 +10,7 @@ function App() {
   }
 
   function handleTheme(param) {
+    // This change won't re-render the component
     theme = param;
 
     console.log("hello");
@@ -36,7 +37,7 @@ function App() {
 
       <button onClick={handleAlert}> Click again </button>
 
-      {/* The arrow function returns the handleTheme, and when we click the button, this handler is then called */}
+      {/* The arrow function returns the handleTheme, and when we click the button, this handleTheme is then called */}
 
       <button onClick={() => handleTheme("blue")}>change ThemeMode </button>
       {/* <h3 onCopy={handleChange}>hello there 2024</h3> */}
@@ -64,9 +65,3 @@ function App() {
 export default App;
 
 // document.querySelector("button").addEventListener("click", () => {});
-
-// create the fun
-
-function test() {}
-
-test();
