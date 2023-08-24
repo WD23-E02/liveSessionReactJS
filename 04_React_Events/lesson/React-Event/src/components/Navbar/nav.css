@@ -1,0 +1,19 @@
+.navbar {
+  background-color: #203748;
+  color: white;
+  padding: 10px 0;
+  width: 100vw;
+}
+
+li {
+  display: inline;
+  margin-right: 20px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
