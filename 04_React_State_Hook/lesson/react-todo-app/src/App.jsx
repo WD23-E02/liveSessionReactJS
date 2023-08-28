@@ -22,12 +22,26 @@ const addTask=(e)=>{
 }
 
 //delete todo task
-const deleteItem=(id)=>{
+const deleteItem=(id,e)=>{
+  //stop bubble event
+  // stop propagation
+  e.stopPropagation()
   console.log(id)
   const updatedTasks = tasks.filter(task=>task.id!==id)
   setTasks(updatedTasks)
 }
 
+//update status of todo task
+const updateStatus=(id)=>{
+  console.log(id)
+  const updatedTasks = tasks.map(task=>{
+    if(task.id===id){
+      task.done = !task.done
+    }
+    return task;
+  })
+  setTasks(updatedTasks)
+}
 console.log(tasks)
   return (
     <div style={{backgroundColor:theme?"gray":"white",height:"100vh"}}>
@@ -41,7 +55,7 @@ console.log(tasks)
 
     <ul>
      {tasks.map(task=>(
-       <li style={{border:`2px solid ${theme?'white':'black'}`}} key={task.id}>{task.text} <button onClick={()=>deleteItem(task.id)}>X</button></li>
+       <li onClick={()=>updateStatus(task.id)} style={{border:`2px solid ${theme?'white':'black'}` ,backgroundColor:task.done?'yellowgreen':'gray'}} key={task.id}>{task.text} <button onClick={(e)=>deleteItem(task.id,e)}>X</button></li>
      ))}
     </ul>
     </div>
