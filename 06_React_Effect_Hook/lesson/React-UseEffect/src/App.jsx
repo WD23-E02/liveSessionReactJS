@@ -30,7 +30,7 @@ every component has a life cycle
 
   /* 
 The useEffect Hook lets you perform side effects in function components  
-!When to use useEffect
+!When to use useEffect?
 Mounted: When you want to do something right after the component is added to the DOM.
 Updated: If you want to run some code whenever a certain prop or state changes.
 Unmounted: Before the component is removed from the DOM, you might want to clean up any subscriptions or timers.
