@@ -4,10 +4,10 @@ function Child({isLogin, setIsLogin}) {
   useEffect(() => {
     console.log("child component added to dom");
 
-    // the below function (cleanup function) runs before the component is destroyed or removed from the dom
+    // the below function (cleanup function) runs before the component is destroyed or removed from the dom (unmounted)
     return () => {
       console.log("Child component removed from the dom");
-      alert("Are you sure you logged in ?");
+      alert("I'm about to be removed from the DOM");
     };
   }, []);
 
