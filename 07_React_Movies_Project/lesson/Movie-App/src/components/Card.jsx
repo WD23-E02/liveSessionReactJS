@@ -19,6 +19,7 @@ function Card({movie}) {
 
   return (
     <div
+      className="card"
       style={{
         background: "white",
         width: "300px",
@@ -31,7 +32,9 @@ function Card({movie}) {
       }}
     >
       <h2>{movieDetails.Title}</h2>
-      <span>{movieDetails.Actors}</span>
+      <span style={{backgroundColor: "#ff89", margin: "10px"}}>
+        {movieDetails.Actors}
+      </span>
       <img src={movieDetails.Poster} />
       <i>{movieDetails.Type}</i>
     </div>
