@@ -10,9 +10,10 @@ function Search({handleSearch}) {
     handleSearch(searchInput);
   };
 
-  //Debouncing:is a technique used to control how often a function is called
+  //Debouncing:is a technique used to control how often a function is called,it's prevent unnecessary API requests for each character typed.
 
   useEffect(() => {
+    // Create a timeout to execute handleSearch after 700ms of user inactivity
     const timer = setTimeout(() => {
       handleSearch(searchInput);
     }, 700);
