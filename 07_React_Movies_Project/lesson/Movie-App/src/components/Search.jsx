@@ -11,10 +11,10 @@ function Search({ handleSearch }) {
     handleSearch(searchInput);
   };
 
+
   //on mount fetch and display movies data
   useEffect(() => {
-    //fetch data
-    /*   handleSearch(searchInput); */
+    
     // cleanup to clean the settimeOut before start a new setTimeout
     return () => {
       clearTimeout(timer.current);
