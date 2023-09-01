@@ -1,6 +1,6 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, {useEffect, useRef, useState} from "react";
 
-function Search({ handleSearch }) {
+function Search({handleSearch}) {
   const [searchInput, setSearchInput] = useState("cast");
   //   console.log(searchInput);
 
@@ -11,10 +11,8 @@ function Search({ handleSearch }) {
     handleSearch(searchInput);
   };
 
-
   //on mount fetch and display movies data
   useEffect(() => {
-    
     // cleanup to clean the settimeOut before start a new setTimeout
     return () => {
       clearTimeout(timer.current);
@@ -23,6 +21,7 @@ function Search({ handleSearch }) {
 
   //Debouncing:is a technique used to control how often a function is called
 
+  // Integrated the useRef hook to maintain this mini project as a future reference.
   useEffect(() => {
     console.log(timer.current);
     //if already a fetch is in progress ,cancel previous request
