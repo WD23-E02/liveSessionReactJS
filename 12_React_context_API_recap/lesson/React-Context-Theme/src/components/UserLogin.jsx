@@ -5,6 +5,7 @@ function UserLogin() {
   // This state is only used within this component, making it a local state.
   const [data, setData] = useState(null);
   const {updateUser} = useContext(AuthContext);
+
   function handleChange(e) {
     // To avoid losing your previous data, we are using a callback function along with the spread operator
     setData((prev) => ({...prev, [e.target.name]: e.target.value}));
