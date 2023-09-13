@@ -1,12 +1,18 @@
-import React from 'react'
+import React from "react";
 
-export default function Button({children, color}) {
+export default function Button({ children, color }) {
   return (
-    <button style={
-        {
-            backgroundColor:color==="primary"?"blue":
-        color==="success"?"green":"yellow"
-    }}
-        >{children}</button>
-  )
+    <button
+      style={{
+        backgroundColor:
+          color === "primary"
+            ? "blue"
+            : color === "success"
+            ? "green"
+            : "yellow",
+      }}
+    >
+      {children}
+    </button>
+  );
 }

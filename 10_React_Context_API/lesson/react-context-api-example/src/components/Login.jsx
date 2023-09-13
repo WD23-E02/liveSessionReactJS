@@ -31,5 +31,22 @@ export default function Login() {
             <button>submit</button>
         </form>
     </div>
+
+
   )
 }
+
+
+
+// for class component use context like this 
+{/* <MyContext.Consumer>
+{(context)=>{
+    return ( <div>
+        <form onSubmit={loginUser}>
+            <label htmlFor="">Email: <input type="email" name="email" /></label><br />
+            <label htmlFor="">Password: <input type="password" name="password" /></label><br />
+            <button>submit</button>
+        </form>
+    </div> )
+}}
+</MyContext.Consumer> */}
