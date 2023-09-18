@@ -1,5 +1,7 @@
 import React, { useContext, useState } from "react";
 import { MyContext } from "../context/context";
+import { todoAction } from "../context/actions";
+
 
 export default function TodoContainer() {
   const { state, dispatch } = useContext(MyContext);
@@ -23,7 +25,7 @@ export default function TodoContainer() {
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          dispatch({ type: "additem", payload: e.target.task.value });
+          dispatch(todoAction("additem",e.target.task.value));
           e.target.reset();
         }}
       >
@@ -39,13 +41,13 @@ export default function TodoContainer() {
             {" "}
             {item.text}{" "}
             <span
-              onClick={() => dispatch({ type: "deleteitem", payload: item.id })}
+              onClick={() => dispatch(todoAction("deleteitem",item.id))}
             >
               {" "}
               ❌{" "}
             </span>
             <span
-              onClick={() => dispatch({ type: "updateitem", payload: item.id })}
+              onClick={() => dispatch(todoAction("updateitem",item.id))}
             >
               {" "}
               🗄{" "}
