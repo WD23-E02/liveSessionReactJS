@@ -1,0 +1,70 @@
+.App {
+  text-align: center;
+  min-height: 100vh;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.light {
+  background-color: white;
+  color: black;
+}
+
+.dark {
+  background-color: rgba(16, 14, 14, 0.866);
+  color: white;
+}
+
+.lightHeader {
+  background-color: white;
+  color: black;
+}
+
+.darkHeader {
+  background-color: rgba(16, 14, 14, 0.866);
+  color: white;
+}
+
+.lightButton {
+  background-color: white;
+  color: black;
+}
+
+.darkButton {
+  background-color: rgba(16, 14, 14, 0.866);
+  color: white;
+}
+
+.header {
+  margin-bottom: 20px;
+}
+
+.toggleButton {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.main {
+  width: 80%;
+  margin: 80px auto;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 0 60px rgba(1, 134, 251, 0.638);
+}
+
+.content {
+  width: 100%;
+  /* max-width: 800px; */
+  text-align: left;
+}
+
+p {
+  margin: 10px 0;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+.bg {
+  background-color: rgba(6, 22, 97, 0.944);
+}
